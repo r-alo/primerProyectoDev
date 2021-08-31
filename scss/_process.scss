@@ -1,0 +1,9 @@
+.proceso{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+.proceso__h2--alinear{
+    justify-self: start;
+}

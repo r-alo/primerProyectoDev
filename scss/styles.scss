@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+// Variables
+$wsmoke: whitesmoke;
+$indie: 'Indie Flower', cursive;
+
+.main{ 
+    h1{
+    display: flex;
+    align-self: center;
+    font-size: 40px;
+    justify-content: center;
+    }
+    img{
+        display: flex;
+        align-self: center;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: $wsmoke;
+    font-weight: bold;
+    font-size: 300%;
+    word-spacing: 15px;
+    font-family: $indie;
+}
+
+h2{
+    font-size: 200%;
+}
+
+p{
+    color: rgb(201, 201, 201);
+}
+
+.backgroundUno{
+    background-image: linear-gradient(to bottom, rgb(88, 88, 88), rgb(53, 53, 53), rgb(27, 27, 27), rgb(13, 13, 13), rgb(0, 0, 0));
+}
+
+// Imports
+
+@import 'inicio';
+@import 'nav';
+@import 'anillo';
+@import 'collar';
+@import 'process';
+
+/* Footer */
+
+footer{
+    display: flex;
+    height: 120px;
+    flex-flow: row-reverse;
+    grid-area: footer;
+    align-items:flex-end;
+}
+
+/* Contacto */
+
+form{
+    padding: 10px;
+    padding-right: 800px;
+}

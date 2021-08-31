@@ -1,0 +1,81 @@
+/* Menu navegación */
+
+header{ 
+    grid-area: header;
+    display: flex;
+    aside{
+        width: 50px;
+        height: 50px;
+    }
+    img{
+        animation-duration: 3s;
+        animation-name: aparece;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes aparece {
+    20% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+}
+
+nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-content: center;
+    align-self: center;
+    grid-area: nav;
+    padding-left: 0;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: $wsmoke;
+    font-size: 0;
+    flex-basis:100%;
+    align-self: center;
+    align-content: space-evenly;
+    justify-content: center;
+    font-family: $indie;
+    li{
+        display: inline-block;
+        width: 100%;
+        font-size: 20px;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        color: $wsmoke;
+    }
+    ul{
+        position: absolute;
+        display: none;
+    }
+        li{
+            display:block;
+            padding-right: 15px;
+        }
+    a{
+        color: rgb(185, 173, 173);
+        text-decoration: none;
+    }
+        a:hover{
+            color:black;
+        }
+}
+
+ul li:hover ul{
+    display: block;
+}
+
+.separacion{
+    padding-top:120px;
+}

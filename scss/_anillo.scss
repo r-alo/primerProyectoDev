@@ -1,0 +1,51 @@
+/* Estructura Anillos */
+
+.anilloGrid{
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-template-rows: 100px 400px 400px;
+    grid-template-areas: 
+        "h2 h2 h2"
+        "ring1 ring2 ring3"
+        "ring4 ring5 ring6";
+    color: $wsmoke;
+    justify-items: center;
+    align-items: baseline;
+    img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.titulo{
+    grid-area: h2;
+}
+
+.titulo__h2--alin{
+    justify-self: left;
+    padding-left: 80px;
+}
+
+$anillos:ring1,ring2,ring3,ring4,ring5,ring6;
+
+@each $grida in $anillos{
+    .#{$grida}{
+        grid-area:$grida;
+    }
+}
+
+@media(max-width: 780px){
+    .anilloGrid{
+        grid-template-areas: 
+            "h2"
+            "ring1"
+            "ring2"
+            "ring3"
+            "ring4"
+            "ring5"
+            "ring6"
+            "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8,1fr);
+    }
+}

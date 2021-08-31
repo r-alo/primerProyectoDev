@@ -1,0 +1,49 @@
+.collarGrid{
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-template-rows: 100px 400px 400px;
+    grid-template-areas: 
+        "h2 h2 h2"
+        "collar1 collar2 collar3"
+        "collar4 collar5 collar6";
+    color: $wsmoke;
+    justify-items: center;
+    align-items: baseline;
+    img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.titulo{
+    grid-area: h2;
+}
+
+.titulo__h2--alin{
+    justify-self: left;
+    padding-left: 80px;
+}
+
+$collars:collar1,collar2,collar3,collar4,collar5,collar6;
+
+@each $grida in $collars{
+    .#{$grida}{
+        grid-area:$grida;
+    }
+}
+
+@media(max-width: 780px){
+    .collarGrid{
+        grid-template-areas: 
+            "h2"
+            "collar1"
+            "collar2"
+            "collar3"
+            "collar4"
+            "collar5"
+            "collar6"
+            "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8,1fr);
+    }
+}
